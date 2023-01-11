@@ -35,16 +35,9 @@ const App = () => {
   return (
     <>
       <div className="container">
-        {dresses.map((dress) => {
-          return (
-            <>
-            <Home dress={dress}/>
-            </>
-          )
-        })}
+        <Home dresses={dresses}/>
         <Add handleCreate={handleCreate}/>
       </div>
-
     </>
   )
 }

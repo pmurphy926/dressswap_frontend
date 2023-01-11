@@ -1,9 +1,15 @@
 const Home = (props) => {
     return (
         <>
-            <div className="dresses-grid" key={props.dress.id}>
-                <img className="home-grid-image" src={props.dress.imageURL} alt="" />
-            </div>
+        <div className="dresses-grid">
+            {props.dresses.map((dress) => {
+                return (
+                    <div className="dresses-container" key={dress.id}>
+                        <img className="home-grid-image" src={dress.imageURL} alt="" />
+                    </div> 
+                )
+            })}
+        </div>
 
             <div className="home-buttons-div">
                 <button className="home-button">Home</button>

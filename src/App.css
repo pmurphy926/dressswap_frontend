@@ -1,6 +1,6 @@
 .dresses-grid {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
 }
 
 .home-buttons-div {
@@ -8,7 +8,8 @@
 }
 
 .home-grid-image {
-  width: 100%
+  width: 100%;
+  /* min-height: 100%; */
 }
 
 .home-button {
