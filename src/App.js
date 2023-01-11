@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import './App.css';
+import Home from './components/home';
 
-function App() {
+const App = () => {
+
+  const getDresses = () => {
+    axios
+      .get('https://sheltered-basin-22350.herokuapp.com/api/dresses')
+      .then(
+        (response) => setDresses(response.data),
+        (err) => console.error(err)
+      )
+      .catch((error) => console.error(error))
+   }
+   
+   useEffect(() => {
+    getDresses()
+   }, [])
+   
+
+  const [dresses, setDresses] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="container">
+        {dresses.map((dress) => {
+          return (
+            <Home dress={dress}/>
+          )
+        })}
+      </div>
+
+    </>
+  )
 }
 
-export default App;
+export default App
