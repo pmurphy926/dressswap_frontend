@@ -3,6 +3,8 @@ import axios from 'axios'
 import './App.css';
 import Home from './components/home';
 import Add from './components/add';
+import Login from './components/login';
+import Browse from './components/browse';
 
 const App = () => {
 
@@ -34,9 +36,11 @@ const App = () => {
 
   return (
     <>
+    <Login />
       <div className="container">
         <Home dresses={dresses}/>
         <Add handleCreate={handleCreate}/>
+        <Browse dresses={dresses}/>
       </div>
     </>
   )

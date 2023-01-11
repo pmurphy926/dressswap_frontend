@@ -1,3 +1,19 @@
+.login-div {
+  background-image: url('https://cdn.grmag.com/wp-content/uploads/sites/113/2019/10/Bella-Bridesmaids-dresses-on-rack.jpg');
+  text-align: center;
+}
+
+.login-buttons-div {
+  width: 50%;
+  padding: 5%;
+  background-color: burlywood;
+  margin: 0 auto;
+}
+
+.login-buttons {
+  padding: 3%;
+}
+
 .dresses-grid {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
@@ -14,4 +30,13 @@
 
 .home-button {
   display: block;
+}
+
+.browse-dress-images-div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.browse-dress-image {
+  width: 100%;
 }

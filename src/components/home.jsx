@@ -11,13 +11,13 @@ const Home = (props) => {
             })}
         </div>
 
-            <div className="home-buttons-div">
-                <button className="home-button">Home</button>
-                <button className="home-button">Add Dress</button>
-                <button className="home-button">Wishlist</button>
-                <button className="home-button">Profile</button>
-                <button className="home-button">Settings</button>
-            </div>
+        <div className="home-buttons-div">
+            <button className="home-button">Browse</button>
+            <button className="home-button">Add Dress</button>
+            <button className="home-button">Wishlist</button>
+            <button className="home-button">Profile</button>
+            <button className="home-button">Settings</button>
+        </div>
         </>
     )
 }
