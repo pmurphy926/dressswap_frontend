@@ -2,8 +2,17 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css';
 import Home from './components/home';
+import Add from './components/add';
 
 const App = () => {
+
+  const handleCreate = (addDress) => {
+    axios
+      .post('https://sheltered-basin-22350.herokuapp.com/api/dresses', addDress)
+      .then((response) => {
+        getDresses()
+      })
+  }
 
   const getDresses = () => {
     axios
@@ -14,6 +23,7 @@ const App = () => {
       )
       .catch((error) => console.error(error))
    }
+  
    
    useEffect(() => {
     getDresses()
@@ -27,9 +37,12 @@ const App = () => {
       <div className="container">
         {dresses.map((dress) => {
           return (
+            <>
             <Home dress={dress}/>
+            </>
           )
         })}
+        <Add handleCreate={handleCreate}/>
       </div>
 
     </>
