@@ -5,15 +5,6 @@ const Browse = (props) => {
             <form action="" method="POST">
                 <input class="search" type="text" name="" placeholder="Search" />
             </form>
-
-        {/* <div className='sort-button-div'>
-            {filter.map((type) => {
-              return (
-                <button className='sort-button' onClick={() => { filterClothes(type) }}>{type}</button>
-              )
-            })}
-            <button className='sort-button' onClick={()=> {getClothes()}}>full collection</button>
-          </div> */}
         </div>
 
         
@@ -21,7 +12,7 @@ const Browse = (props) => {
             {props.dresses.map((dress) => {
             return (
                 <>
-                <div >
+                <div className="browse-tem-div"> {/* add onclick */}
                     <h4>{dress.color} {dress.brand} dress</h4>
                     <div className="browse-dress-images-div">
                         <img className="browse-dress-image" src={dress.imageURL} alt="dress front" />
