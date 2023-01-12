@@ -1,6 +1,11 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
 .login-div {
   background-image: url('https://cdn.grmag.com/wp-content/uploads/sites/113/2019/10/Bella-Bridesmaids-dresses-on-rack.jpg');
   text-align: center;
+  height: 100%;
 }
 
 .login-buttons-div {
