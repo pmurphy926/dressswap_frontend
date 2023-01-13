@@ -7,7 +7,7 @@ html, body, #root {
 /* ################## Login Page ####################*/
 /* ##################################################*/
 .login-div {
-  background-image: url('https://cdn.grmag.com/wp-content/uploads/sites/113/2019/10/Bella-Bridesmaids-dresses-on-rack.jpg');
+  background-image: url('https://media.self.com/photos/62c6fe17bd9ad7fb45b283d5/4:3/w_2560%2Cc_limit/best-wedding-guest-dresses.jpeg');
   background-size: cover;
   height: 100%;
   position: relative;
@@ -20,7 +20,7 @@ html, body, #root {
 }
 
 .login-title {
-  color: white;
+  color: black;
 }
 
 .login-buttons {
