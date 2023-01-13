@@ -5,6 +5,7 @@ import SignupButton from './signup-button';
 
 const Login = () => {
     const {loginWithRedirect, logout, user, isLoading} = useAuth0();
+
     return (
         <>
             <div className='login-div'>
@@ -16,7 +17,7 @@ const Login = () => {
                 {!isLoading && !user && (
                     <SignupButton/>
                 )}
-                    
+                
                 </div>
             </div>
         </>
