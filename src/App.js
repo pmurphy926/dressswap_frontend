@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './components/home';
 import Add from './components/add';
 import Login from './components/login';
 import Browse from './components/browse';
+import Auth0ProviderWithHistory from './auth0Provider';
 
 const App = () => {
 
@@ -38,6 +39,7 @@ const App = () => {
   return (
     <>
     <BrowserRouter>
+    <Auth0ProviderWithHistory>
       <Routes>
         <Route
           path='/'
@@ -48,6 +50,7 @@ const App = () => {
           element={<Login />}
         /> */}
       </Routes>
+      </Auth0ProviderWithHistory>
     </BrowserRouter>
     {/* <Login />
       <div className="container">
