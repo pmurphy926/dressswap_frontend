@@ -3,7 +3,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import LoginButton from './login-button';
 
 const Login = () => {
-    const {loginWithRedirect, logout, user, isLoading} = useAuth0();
+    const {user, isLoading} = useAuth0();
 
     return (
         <>

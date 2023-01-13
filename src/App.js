@@ -39,6 +39,8 @@ const App = () => {
         <Routes>
           <Route path='/' element={< Login />} />
           <Route path='/home' element={< Home dresses={dresses} />} />
+          <Route path='home/browse' element={< Browse dresses={dresses} />} />
+          <Route path='home/add' element={< Add handleCreate={handleCreate} />} />
         </Routes>
         
     </>
