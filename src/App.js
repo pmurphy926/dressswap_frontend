@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import './App.css';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import './App.css'
 import Home from './components/home';
 import Add from './components/add';
 import Login from './components/login';
@@ -36,12 +37,24 @@ const App = () => {
 
   return (
     <>
-    <Login />
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path='/'
+          element={<Login />}
+        />
+      {/* <Route
+          path='/login'
+          element={<Login />}
+        /> */}
+      </Routes>
+    </BrowserRouter>
+    {/* <Login />
       <div className="container">
         <Home dresses={dresses}/>
         <Add handleCreate={handleCreate}/>
         <Browse dresses={dresses}/>
-      </div>
+      </div> */}
     </>
   )
 }
