@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-// import { Form } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Add = (props) => {
-
+  const navigate = useNavigate();
   let newDress = { name: '', age: '' }
   const [dress, setDress] = useState(newDress)
   
@@ -13,6 +13,7 @@ const Add = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     props.handleCreate(dress)
+    navigate('/home');
   }  
 
   return (

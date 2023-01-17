@@ -5,10 +5,12 @@ import Home from './components/home';
 import Add from './components/add';
 import Login from './components/login';
 import Browse from './components/browse';
+import Detail from './components/detail';
 
 const App = () => {
 
-
+  const [dresses, setDresses] = useState([])
+  const [detailDress, setDetailDress] = useState()
 
   const handleCreate = (addDress) => {
     axios
@@ -27,19 +29,36 @@ const App = () => {
       )
       .catch((error) => console.error(error))
    }
+
+   const handleUpdate = (editDress) => {
+    axios
+      .put('https://sheltered-basin-22350.herokuapp.com/api/dresses/'+ editDress.id, editDress)
+      .then((response)=>{
+        getDresses()
+      })
+  }
+
+  const handleDelete = (item) => {
+    axios
+      .delete('https://sheltered-basin-22350.herokuapp.com/api/dresses/' + item.id)
+      .then((response) => {
+        getDresses()
+      })
+  }
    
    useEffect(() => {
     getDresses()
    }, [])
 
-  const [dresses, setDresses] = useState([])
+  
 
   return (
     <>
         <Routes>
           <Route path='/' element={< Login />} />
           <Route path='/home' element={< Home dresses={dresses} />} />
-          <Route path='home/browse' element={< Browse dresses={dresses} />} />
+          <Route path='home/browse' element={< Browse dresses={dresses} detailDress={detailDress} setDetailDress={setDetailDress}/>}/>
+          <Route path='home/browse/info/:id' element={< Detail dress={detailDress} handleDelete={handleDelete} />} />
           <Route path='home/add' element={< Add handleCreate={handleCreate} />} />
         </Routes>
         
@@ -48,13 +67,4 @@ const App = () => {
 }
 
 export default App
-
-
-    {/* <Login />
-      <div className="container">
-        <Home dresses={dresses}/>
-        <Add handleCreate={handleCreate}/>
-        <Browse dresses={dresses}/>
-      </div> */}
-
       
