@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate, Form } from "react-router-dom";
 
-const Browse = (props) => {
-    const [searchInput, setSearchInput] = useState('')
-    const [filteredResults, setFilteredResults]  = useState([])
-    const [dresses, setDresses] = useState([])
+const Browse2 = (props) => {
+    const [searchTerm, setSearchTerm] = useState('')
 
     const navigate = useNavigate();
 
@@ -13,29 +11,20 @@ const Browse = (props) => {
         navigate(`/home/browse/info/${item.id}`)
     }
 
-    const searchItems = (searchValue) => {
-        setSearchInput(searchValue)
-        if (searchValue.length > 0) {
-            const searchResults = dresses.filter((results) => {
-                return Object.values(results).join('').toLowerCase().includes(searchInput.toLowerCase())
-            })
-        setFilteredResults(searchResults)
-        } else {
-        setFilteredResults(dresses)
-        }
-      }
-
     return (
         <>
         <div className="search-filter">
-            <form className='search-bar-form'>
-                <input className='search-bar' type="text" placeholder='Search' onChange={(event) => searchItems(event.target.value)} /> 
-            </form>
+            <input className='search-bar' type="text" placeholder='Search' onChange={(event) => setSearchTerm(event.target.value)} />
             <button onClick={() => {navigate('/home');}}>Home</button>
         </div>
-
         <div className="browse-dress-div">
-            {props.dresses.map((dress, i) => {
+            {props.dresses.filter((dress) => {
+                if (searchTerm == "") {
+                    return dress
+                } else if (dress.color.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                    return dress
+                }
+            }).map((dress, i) => {
             return (
                   <div className="browse-tem-div" key={i} onClick={() => {showDetail(dress)}}>
                         <h4>{dress.color} {dress.brand} dress</h4>
@@ -45,6 +34,7 @@ const Browse = (props) => {
                             <img className="browse-dress-image" src={dress.image3URL} alt="dress detail" />
                         </div>
                     </div>
+                    
             )
             })}
         </div>
@@ -52,5 +42,4 @@ const Browse = (props) => {
     )
 }
   
-  export default Browse
-
+  export default Browse2

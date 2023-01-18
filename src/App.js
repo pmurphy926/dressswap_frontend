@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './components/home';
 import Add from './components/add';
 import Login from './components/login';
 import Browse from './components/browse';
+import Browse2 from './components/browse2';
 import Detail from './components/detail';
+import Edit from './components/edit';
 
 const App = () => {
 
@@ -30,10 +32,11 @@ const App = () => {
       .catch((error) => console.error(error))
    }
 
-   const handleUpdate = (editDress) => {
+   const handleUpdate = (item) => {
     axios
-      .put('https://sheltered-basin-22350.herokuapp.com/api/dresses/'+ editDress.id, editDress)
+      .put('https://sheltered-basin-22350.herokuapp.com/api/dresses/'+ item.id, item)
       .then((response)=>{
+        setDetailDress(response.data)
         getDresses()
       })
   }
@@ -57,11 +60,12 @@ const App = () => {
         <Routes>
           <Route path='/' element={< Login />} />
           <Route path='/home' element={< Home dresses={dresses} />} />
-          <Route path='home/browse' element={< Browse dresses={dresses} detailDress={detailDress} setDetailDress={setDetailDress}/>}/>
+          <Route path='home/browse' element={< Browse2 dresses={dresses} detailDress={detailDress} setDetailDress={setDetailDress}/>}/>
           <Route path='home/browse/info/:id' element={< Detail dress={detailDress} handleDelete={handleDelete} />} />
+          <Route path='/edit' element={< Edit dress={detailDress} handleUpdate={handleUpdate} />} />
           <Route path='home/add' element={< Add handleCreate={handleCreate} />} />
         </Routes>
-        
+        {/* start routes with slashes */}
     </>
   )
 }

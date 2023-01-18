@@ -63,3 +63,29 @@ html, body, #root {
 .browse-dress-image {
   width: 100%;
 }
+
+/* ##################################################*/
+/* ################## Search Bar ####################*/
+/* ##################################################*/
+.search-filter {
+  text-align: center;
+}
+
+.search-bar {
+  width: 90%;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+/* ##################################################*/
+/* ################# Detail Page ####################*/
+/* ##################################################*/
+.item-detail-images-div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.detail-dress-image {
+  width: 100%;
+}

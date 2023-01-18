@@ -9,10 +9,14 @@ const Detail = (props) => {
         navigate('/home/browse')
     }
 
+    const showEdit = () => {
+        navigate('/edit')
+    }
+
     return (
         <>
         <div className="item-detail-div">
-            <div className="item-detail-images">
+            <div className="item-detail-images-div">
                 <img className="detail-dress-image" src={props.dress?.imageURL} alt="dress front" />
                 <img className="detail-dress-image" src={props.dress?.image2URL} alt="dress back" />
                 <img className="detail-dress-image" src={props.dress?.image3URL} alt="dress detail" />
@@ -22,6 +26,8 @@ const Detail = (props) => {
                 <p>Color: {props.dress?.color}</p>
                 <p>Size: {props.dress?.size}</p>
                 <button onClick={afterDelete}>Delete Dress</button>
+                <button onClick={showEdit}>Edit Dress</button>
+                <button onClick={() => {navigate('/home/browse');}}>Back to Browse</button>
             </div>
         </div>
         </>
