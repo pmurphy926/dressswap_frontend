@@ -23,7 +23,11 @@ const Browse2 = (props) => {
                     return dress
                 } else if (dress.color.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
                     return dress
-                }
+                } else if (dress.brand.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                    return dress
+                } else if (dress.size.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                    return dress
+                } 
             }).map((dress, i) => {
             return (
                   <div className="browse-tem-div" key={i} onClick={() => {showDetail(dress)}}>
