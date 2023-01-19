@@ -31,7 +31,7 @@ const Browse = (props) => {
             <form className='search-bar-form'>
                 <input className='search-bar' type="text" placeholder='Search' onChange={(event) => searchItems(event.target.value)} /> 
             </form>
-            <button onClick={() => {navigate('/home');}}>Home</button>
+            <button className='browse-home-button' onClick={() => {navigate('/home');}}>Home</button>
         </div>
 
         <div className="browse-dress-div">

@@ -25,6 +25,7 @@ const Detail = (props) => {
                 <p>Brand: {props.dress?.brand}</p>
                 <p>Color: {props.dress?.color}</p>
                 <p>Size: {props.dress?.size}</p>
+                <p>Size: {props.dress?.styles}</p>
                 <button onClick={afterDelete}>Delete Dress</button>
                 <button onClick={showEdit}>Edit Dress</button>
                 <button onClick={() => {navigate('/home/browse');}}>Back to Browse</button>

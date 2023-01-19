@@ -7,7 +7,7 @@ html, body, #root {
 /* ################## Login Page ####################*/
 /* ##################################################*/
 .login-div {
-  background-image: url('https://media.self.com/photos/62c6fe17bd9ad7fb45b283d5/4:3/w_2560%2Cc_limit/best-wedding-guest-dresses.jpeg');
+  background-image: url('https://media.self.com/photos/62c6fe17bd9ad7fb45b283d5/3:4/w_2880,h_3840,c_limit/best-wedding-guest-dresses.jpeg');
   background-size: cover;
   height: 100%;
   position: relative;
@@ -34,22 +34,35 @@ html, body, #root {
 /* ##################################################*/
 /* ################## Home Page #####################*/
 /* ##################################################*/
-.dresses-grid {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-}
-
 .home-buttons-div {
-  text-align: center;
-}
-
-.home-grid-image {
-  width: 100%;
-  /* min-height: 100%; */
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 15px;
 }
 
 .home-button {
-  display: block;
+  padding: 5px;
+  width: 150px;
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.home-heading {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.home-banner {
+  width: 100%;
+  height: 60%;
+  background-image: url('https://media.self.com/photos/62c6fe17bd9ad7fb45b283d5/4:3/w_2560%2Cc_limit/best-wedding-guest-dresses.jpeg');
+  background-size: cover;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
 }
 
 /* ##################################################*/
@@ -64,11 +77,15 @@ html, body, #root {
   width: 100%;
 }
 
+.browse-item-heading {
+  margin-left: 5px;
+}
 /* ##################################################*/
 /* ################## Search Bar ####################*/
 /* ##################################################*/
 .search-filter {
   text-align: center;
+  /* background-image: url('https://media.self.com/photos/62c6fe17bd9ad7fb45b283d5/4:3/w_2560%2Cc_limit/best-wedding-guest-dresses.jpeg'); */
 }
 
 .search-bar {
@@ -78,6 +95,9 @@ html, body, #root {
   padding: 5px;
 }
 
+.browse-home-button {
+  margin-bottom: 10px;
+}
 /* ##################################################*/
 /* ################# Detail Page ####################*/
 /* ##################################################*/
