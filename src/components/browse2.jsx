@@ -15,7 +15,7 @@ const Browse2 = (props) => {
         <>
         <div className='browse'>
             <div className="search-filter">
-                <input className='search-bar' type="text" placeholder='Search' onChange={(event) => setSearchTerm(event.target.value)} />
+                <input className='search-bar' type="text" placeholder='Search' onChange={(event) => setSearchTerm(event.target.value)} /><br />
                 <button className='' onClick={() => {navigate('/home');}}>Home</button>
             </div>
             <div className="browse-dress-div">
