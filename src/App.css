@@ -42,10 +42,13 @@ html, body, #root {
 }
 
 .home-button {
-  padding: 5px;
+  padding: 7px;
   width: 150px;
   align-self: center;
   margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 207, 186);
 }
 
 .home-heading {
@@ -80,6 +83,17 @@ html, body, #root {
 .browse-item-heading {
   margin-left: 5px;
 }
+
+.browse-home-button {
+  padding: 7px;
+  width: 100px;
+  align-self: center;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 207, 186);
+}
+
 /* ##################################################*/
 /* ################## Search Bar ####################*/
 /* ##################################################*/
@@ -108,4 +122,73 @@ html, body, #root {
 
 .detail-dress-image {
   width: 100%;
+}
+
+.item-detail-info {
+  text-align: center;
+}
+
+.item-detail-buttons-div {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.item-detail-button {
+  padding: 7px;
+  width: 150px;
+  align-self: center;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 207, 186);
+}
+
+/* ##################################################*/
+/* ################### Add Page #####################*/
+/* ##################################################*/
+.add-form {
+  text-align: center;
+}
+
+.add-form-input {
+  width: 250px;
+}
+
+.add-submit-button {
+  margin-top: 10px;
+  padding: 7px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 207, 186);
+}
+
+/* ##################################################*/
+/* ################## Profile Page ##################*/
+/* ##################################################*/
+.profile-info-div {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.profile-image {
+  border-radius: 50%
+}
+
+.profile-page-buttons {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.profile-page-button {
+  align-self: center;
+  margin-top: 10px;
+  padding: 7px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(223, 207, 186); 
 }

@@ -16,7 +16,7 @@ const Browse2 = (props) => {
         <div className='browse'>
             <div className="search-filter">
                 <input className='search-bar' type="text" placeholder='Search' onChange={(event) => setSearchTerm(event.target.value)} /><br />
-                <button className='' onClick={() => {navigate('/home');}}>Home</button>
+                <button className='browse-home-button' onClick={() => {navigate('/home');}}>Home</button>
             </div>
             <div className="browse-dress-div">
                 {props.dresses.filter((dress) => {
