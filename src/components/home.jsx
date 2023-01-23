@@ -15,9 +15,8 @@ const Home = (props) => {
         <div className="home-buttons-div">
             <button className='home-button' onClick={() => {navigate('/home/browse');}}>Browse</button>
             <button className='home-button' onClick={() => {navigate('/home/add');}}>Add</button>
-            <button className="home-button" onClick={() => {navigate('/wishlist');}}>Wishlist</button>
+            <button className="home-button" onClick={() => {navigate('/wishlist');}}>Favorite Dress</button>
             <button className='home-button' onClick={() => {navigate('/home/profile');}}>Profile</button>
-            <button className="home-button">Settings</button>
             <button className="home-button" onClick={() => logout()}>Log Out</button>
         </div>
         </>

@@ -16,7 +16,7 @@ const Detail = (props) => {
     }
 
     const addToWishlist = () => {
-        props.setWishlist([props.dress])
+        props.setWishlist(props.wishlist.concat([props.dress]))
         console.log(props.wishlist)
     }
 
