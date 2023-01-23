@@ -16,8 +16,13 @@ const Detail = (props) => {
     }
 
     const addToWishlist = () => {
+        if (props.wishlist.includes(props.dress)) {
+            alert('Item already in wishlist')
+            return
+          }
         props.setWishlist(props.wishlist.concat([props.dress]))
         console.log(props.wishlist)
+        alert('Dress added to Wishlist!')
     }
 
     return (
@@ -39,6 +44,7 @@ const Detail = (props) => {
                 <button className='item-detail-button' onClick={showEdit}>Edit Dress</button>
                 <button className='item-detail-button' onClick={addToWishlist}>Add to Wishlist</button>
                 <button className='item-detail-button' onClick={() => {navigate('/home/browse');}}>Back to Browse</button>
+                <button className='item-detail-button' onClick={() => {navigate('/wishlist');}}>View Wishlist</button>
             </div>
         </div>
         </>
