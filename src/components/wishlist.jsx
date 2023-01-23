@@ -9,6 +9,7 @@ const Wishlist = (props) => {
     const showDetail = (item) => {
         props.setDetailDress(item)
         navigate(`/home/browse/info/${item.id}`)
+        console.log('redirect')
       }
   
     return (

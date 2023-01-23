@@ -10,7 +10,7 @@ const Home = (props) => {
     return (
         <>
         <div className="home-banner">
-            <h3 className='home-heading'>Welcome, </h3>
+            <h3 className='home-heading'>Welcome to Dress//Swap</h3>
         </div>
         <div className="home-buttons-div">
             <button className='home-button' onClick={() => {navigate('/home/browse');}}>Browse</button>

@@ -67,7 +67,7 @@ const App = () => {
           <Route path='/edit' element={< Edit dress={detailDress} handleUpdate={handleUpdate} />} />
           <Route path='home/add' element={< Add handleCreate={handleCreate} />} />
           <Route path='/home/profile' element={< Profile />} />
-          <Route path='/wishlist' element={< Wishlist dress={detailDress} dresses={dresses} wishlist={wishlist}/>} />
+          <Route path='/wishlist' element={< Wishlist dress={detailDress} dresses={dresses} setDetailDress={setDetailDress} wishlist={wishlist}/>} />
         </Routes>
         {/* start routes with slashes */}
     </>
