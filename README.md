@@ -1,70 +1,15 @@
 # Welcome to DressSwap!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Inspired by Depop, Poshmark, and other clothing marketplaces, DressSwap aims to be a tool for former, current, and future bridesmaids that are burdened with the responsibility of the dress specified by the brain for whom they...maid. For former bridesmaids, DressSwap is a place to list the dress they wore on that special day that has since hung in the closet, unworn and resented for taking up valuable real estate. For current bridesmaids, this app provides a space for them to browse what is available and maybe even save a few bucks on a dress they'll never wear again.
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+DressSwap is a CRUD app; the backend is built with Django and Python, and the front with React (using React Router for navigation) that allows the user to manipulate a database of bridesmaid dresses. The user can add new dresses, edit and delete a dress they've added, and add other dresses to a wishlist.
 
-### `npm start`
+## Limitations
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The wishlist only works for the current session. I need to develop my understanding of Auth0's user permissions and sessions, set up a new model for a wishlist, or a lot of both. Furthermore, I have not established what users are allowed to edit. Due to Auth0 issues, I have not been able to make multiple accounts function.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The Auth0 implementation behaves inconsistently - The deployed version proved to be more problematic.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Without any eCommerce functionality, the site simply doesn't do much more than a basic CRUD app. Spending so much time on Auth0 and React Router issues left less time for styling than I would have liked.
